@@ -1,0 +1,29 @@
+# Settings come from .env (see .env.example); shell variables override it, e.g.
+#   MOCK_EXTERNAL=1 docker compose up
+x-blazam-env: &blazam-env
+  AUDD_API_TOKEN: ${AUDD_API_TOKEN:-}
+  MOCK_EXTERNAL: ${MOCK_EXTERNAL:-0}
+  AUTO_LEARN: ${AUTO_LEARN:-1}
+  FEATURE_LYRICS: ${FEATURE_LYRICS:-1}
+  FEATURE_ACOUSTID: ${FEATURE_ACOUSTID:-0}
+  ACOUSTID_API_KEY: ${ACOUSTID_API_KEY:-}
+  BLAZAM_USER_AGENT: ${BLAZAM_USER_AGENT:-Blazam/0.1.0 ( https://github.com/your-name/blazam )}
+  CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment: *blazam-env
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  # one-off seeding:  docker compose run --rm seed
+  seed:
+    build: .
+    profiles: ["tools"]
+    command: ["python", "-m", "app.seed", "--source", "deezer", "--chart", "--limit", "300"]
+    environment: *blazam-env
+    volumes:
+      - ./data:/data

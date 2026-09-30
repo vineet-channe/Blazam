@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+# audio previews, uploads, the SQLite library and caches: personal/dev use only, never commit
+data/

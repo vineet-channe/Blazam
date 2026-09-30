@@ -1,0 +1,8 @@
+HTTP/2 307 
+date: Tue, 29 Sep 2026 19:24:59 GMT
+content-type: text/plain; charset=utf-8
+content-length: 143
+location: https://archive.org/download/mbid-1ddb40a4-d7d7-44f3-8f12-7617484e7983/mbid-1ddb40a4-d7d7-44f3-8f12-7617484e7983-32716317186_thumb500.jpg
+access-control-allow-origin: *
+x-mb-gateway: rex
+

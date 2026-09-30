@@ -1,0 +1,11 @@
+# runtime (pinned; versions verified in .venv on 2026-09-29)
+fastapi==0.142.0
+starlette==1.7.0
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+numpy==2.4.6
+scipy==1.17.1
+soundfile==0.14.0
+python-multipart==0.0.32
+pydantic==2.13.5
+python-dotenv==1.2.3

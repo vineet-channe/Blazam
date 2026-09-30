@@ -1,0 +1,12 @@
+HTTP/2 200 
+date: Tue, 29 Sep 2026 19:25:32 GMT
+content-type: application/json
+content-length: 34
+server: cloudflare
+access-control-allow-origin: *
+x-content-type-options: nosniff
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=2592000; includeSubDomains; preload
+cf-ray: a42d5fd2280eda80-EWR
+alt-svc: h3=":443"; ma=86400
+

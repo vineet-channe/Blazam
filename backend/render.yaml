@@ -1,0 +1,29 @@
+# Render Blueprint for the Blazam API (New > Blueprint, point it at this repo).
+# The persistent disk holds the SQLite DB, the index snapshot and the preview audio; it starts
+# empty, so seed once from the service Shell after the first deploy (see README "Deploy on Render").
+services:
+  - type: web
+    name: blazam-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard            # 2 GB RAM: the in-memory index is ~100 MB on disk, more once loaded
+    healthCheckPath: /api/health
+    disk:
+      name: blazam-data
+      mountPath: /data        # matches BLAZAM_DATA_DIR in the Dockerfile
+      sizeGB: 5
+    envVars:
+      - key: AUDD_API_TOKEN
+        sync: false           # secret: set it in the dashboard
+      - key: BLAZAM_USER_AGENT
+        sync: false           # e.g. "Blazam/0.1.0 ( you@example.com )", required by MusicBrainz/LRCLIB
+      - key: CORS_ORIGINS
+        sync: false           # e.g. https://blazam.vercel.app,https://your-domain.com
+      - key: CORS_ORIGIN_REGEX
+        sync: false           # optional, e.g. https://blazam-[a-z0-9-]+\.vercel\.app for preview deploys
+      - key: AUTO_LEARN
+        value: "1"
+      - key: FEATURE_LYRICS
+        value: "1"
+      - key: MOCK_EXTERNAL
+        value: "0"

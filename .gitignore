@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# secrets (backend/.env holds the AudD token); the example file is safe
+.env
+.env.*
+!.env.example
+
+# audio we may not redistribute: local full songs and real recordings
+/music/
+/Music/
+/backend/test_clip.webm
+
+# third-party design reference (screenshot of another site)
+/frontend/reference.png

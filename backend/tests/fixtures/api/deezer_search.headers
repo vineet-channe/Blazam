@@ -1,0 +1,19 @@
+HTTP/2 200 
+server: Apache
+access-control-allow-headers: X-Requested-With, Content-Type, Authorization, Origin, Accept, Accept-Encoding
+access-control-allow-methods: POST, GET, OPTIONS, DELETE, PUT
+access-control-allow-credentials: true
+access-control-expose-headers: Location
+access-control-max-age: 86400
+p3p: policyref="/w3c/p3p.xml" CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
+x-host: dzr-web-142
+x-content-type-options: nosniff
+content-type: application/json; charset=utf-8
+strict-transport-security: max-age=31536000; includeSubDomains
+date: Tue, 29 Sep 2026 19:24:19 GMT
+content-length: 4516
+set-cookie: dzr_uniq_id=dzr_uniq_id_frff1c2e515422c460e4cc1da1d429d323d105f2; expires=Sun, 28 Mar 2027 19:24:19 GMT; Max-Age=15552000; path=/; domain=.deezer.com; secure; SameSite=None
+x-org: FR
+set-cookie: _abck=51BBDDB95DC2944AE705636217B7E452~-1~YAAQBhAoF7o0OOegAQAAmAOg7hA/zDScdTvSjYZzviparTZsLHVY8zTDZHq8tvV696cDLVtM213mVKkhayVboTttGoiGacRkdfdv9RX9EpppUuDolPJ/5qJg4NYiLZpeI+/3H0cDvWjj02fqsxL25bPdSvcvZkxX7o5l6e8m+Aur58RilzYdVdIp0M9zNm/af2gHS+dS5NwK9fGyuBmabg6MDJ7gJIt4swiOUB1wOeTkU72PU9/937QDWGqh87MOf6HiyoLjhA+FMTHehriByLCu648pbeelKhU08OWzsd1BcnVD8BWF9vMBM4IvksmLRC6UTmOUXJMenXQ3zZbAf1x/0WDOhJpQMwDWqliM7z+hLLUxRz9/t3yRuoiggwY4ROnuJhM7ncni5E3tpCMvY1pNOPK5n9w+sxD4shfa87lKOaMXSbtv6tsUj7Vzd1EIWhzwUPg=~-1~-1~-1~-1~-1; Domain=.deezer.com; Path=/; Expires=Wed, 29 Sep 2027 19:24:19 GMT; Max-Age=31536000; Secure
+set-cookie: bm_sz=AAC22D1D7832AA921EEF721EA07D07B2~YAAQBhAoF7s0OOegAQAAmAOg7gHRQxh5iP80YdZpmZnhNeicbWVikOLRNC2BS5pDmOZQsV6myeH/tUZbvUiwRZlieMkry7RdUubejm3/prpLnIPkY+t2ZF/3NKXFB38XoYXzRqKnb8WxnWRBvqo04nJAFXB7Mu2at5f1XDYMNCy/qdSOPUnIBI3QctiCWKHiimSNGyPuwOMaHPbmJ6K+NG5B5uEJfK3/+QqBNIkzbjo60uS3UDQlxEsMtugstjvEL0JYN/HVxUsDd4AfMYVWqVReLjQIm6o1uWwvwW//oeupXj56aba9JRHQa5myJbmHbkBEJHW8e7+glhLcs5Qk4kUCXSobBUvnYrP1bLsXm8U+M1micIX2cxw=~3422533~3619139; Domain=.deezer.com; Path=/; Expires=Tue, 29 Sep 2026 23:24:19 GMT; Max-Age=14400
+

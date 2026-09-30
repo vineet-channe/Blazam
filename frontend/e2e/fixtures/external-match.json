@@ -1,0 +1,21 @@
+{
+  "_note": "Real /api/recognize response captured 2026-09-30 (AudD tier). Metadata only; the expiring signed preview URL is removed.",
+  "status": "match",
+  "source": "external",
+  "confidence": null,
+  "score": 5,
+  "offset_seconds": 58.0,
+  "latency_ms": 1811.4,
+  "song": {
+    "id": null,
+    "title": "Dancing Queen",
+    "artist": "ABBA",
+    "album": "ABBA Gold",
+    "year": 2008,
+    "cover_url": "https://cdn-images.dzcdn.net/images/cover/b8b70d474b7a8f27799e0d665e9b737e/1000x1000-000000-80-0-0.jpg",
+    "deezer_id": 884025,
+    "mbid": "a502f559-f70c-4e0d-a5e5-e0cc319d0bd7",
+    "preview_url": null
+  },
+  "learned": true
+}

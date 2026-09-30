@@ -1,0 +1,15 @@
+HTTP/2 200 
+date: Tue, 29 Sep 2026 19:24:38 GMT
+content-type: application/json; charset=utf-8
+content-length: 1929
+vary: Accept-Encoding
+x-ratelimit-limit: 1900
+x-ratelimit-remaining: 17
+x-ratelimit-reset: 1790709878
+server: Plack::Handler::Starlet
+etag: "6201d6b15e775c66d6a6fb68043cfc8a"
+access-control-allow-origin: *
+x-runtime: 0.079550
+x-mb-gateway: rex
+x-cache-status: MISS
+

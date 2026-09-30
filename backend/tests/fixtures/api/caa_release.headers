@@ -1,0 +1,8 @@
+HTTP/2 307 
+date: Tue, 29 Sep 2026 19:25:09 GMT
+content-type: text/plain; charset=utf-8
+content-length: 87
+location: https://archive.org/download/mbid-4867ceba-ffe7-40c0-a093-45be6c03c655/index.json
+access-control-allow-origin: *
+x-mb-gateway: rex
+

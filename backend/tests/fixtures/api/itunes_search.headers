@@ -1,0 +1,34 @@
+HTTP/2 200 
+server: daiquiri/5
+content-type: text/javascript; charset=utf-8
+x-apple-jingle-correlation-key: H4LIMAYJVX36CQ2YBHEJZXQDRA
+x-apple-request-uuid: 3f168603-09ad-f7e1-4358-09c89cde0388
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?term=daft+punk+get+lucky&media=music&entity=song&limit=2&country=US&urlDesc=
+apple-tk: false
+x-b3-spanid: 813b03a605e33c46
+b3: 3f16860309adf7e1435809c89cde0388-813b03a605e33c46
+content-disposition: attachment; filename=1.txt
+x-b3-traceid: 3f16860309adf7e1435809c89cde0388
+x-content-type-options: nosniff
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6501944:::
+apple-seq: 0.0
+access-control-allow-origin: *
+apple-originating-system: MZStoreServices
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?term=daft+punk+get+lucky&media=music&entity=song&limit=2&country=US
+x-apple-application-site: MR22
+apple-timing-app: 81 ms
+x-apple-application-instance: 6501944
+x-daiquiri-instance: daiquiri:17317011:mr36p00it-hyhk09154501:7987:26RELEASE170:daiquiri-amp-store-shared-int-001-mr
+x-daiquiri-debug-worker-pid: 58231
+x-daiquiri-instance: daiquiri:12282007:mr47p00it-qujn07093001:7987:26RELEASE170:daiquiri-amp-store-l7shared-ext-001-mr
+x-daiquiri-debug-worker-pid: 77671
+cache-control: max-age=86400
+date: Tue, 29 Sep 2026 19:24:20 GMT
+content-length: 3362
+x-cache: TCP_MISS from a23-204-137-167.deploy.akamaitechnologies.com (AkamaiGHost/22.6.3-da071da6976b6d633b0b37bcfe65c0fc) (-)
+x-true-cache-key: /L/itunes.apple.com/search vcd=2897 ci2=country=US&entity=song&limit=2&media=music&term=daft+punk+get+lucky///
+x-cache-remote: TCP_MISS from a23-48-100-24.deploy.akamaitechnologies.com (AkamaiGHost/22.6.3-da071da6976b6d633b0b37bcfe65c0fc) (-)
+x-apple-partner: origin.0
+

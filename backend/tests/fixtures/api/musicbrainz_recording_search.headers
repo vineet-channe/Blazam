@@ -1,0 +1,19 @@
+HTTP/2 200 
+date: Tue, 29 Sep 2026 19:24:40 GMT
+content-type: application/json
+content-length: 4992
+vary: Accept-Encoding
+x-ratelimit-limit: 400
+x-ratelimit-remaining: 123
+x-ratelimit-reset: 1790709880
+content-security-policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; font-src 'self'; frame-ancestors 'none'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self';
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+last-modified: Tue, 29 Sep 2026 19:23:58 GMT
+etag: "MTRkYWNlMDAwMDAwMDAwMFNvbHI="
+vary: Accept-Encoding
+x-mb-gateway: rex
+x-cache-status: MISS
+access-control-allow-origin: *
+
