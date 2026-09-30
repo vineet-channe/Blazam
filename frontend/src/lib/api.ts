@@ -11,7 +11,12 @@ import {
   type Job,
 } from "./schemas";
 
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
+/**
+ * Backend base URL. Production builds call the same-origin /backend proxy (see next.config.ts,
+ * target set by the server-only BLAZAM_API_ORIGIN); `next dev` talks to localhost:8000 directly.
+ * NEXT_PUBLIC_API_URL, if set, overrides both.
+ */
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "production" ? "/backend" : "http://localhost:8000")).replace(/\/$/, "");
 
 export type ApiErrorKind = "offline" | "timeout" | "bad_audio" | "too_large" | "not_found" | "server" | "invalid";
 

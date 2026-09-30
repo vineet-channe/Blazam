@@ -31,24 +31,29 @@ npm run test:e2e                 # screenshots of every state land in e2e/screen
 
 | env var | default | meaning |
 |---|---|---|
-| `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | Blazam backend |
+| `BLAZAM_API_ORIGIN` | `http://localhost:8000` | backend the production `/backend` proxy forwards to (server-only) |
+| `NEXT_PUBLIC_API_URL` | unset | optional override: browser calls this URL directly instead (needs CORS) |
 | `NEXT_PUBLIC_RECORD_MS` | `8000` | clip length, clamped to 7000–10000 |
 
 Add `?webgl=0` to any URL to force the no-WebGL fallback.
 
 ### Deploy on Vercel (frontend) + Render (backend)
 
-1. Deploy the backend on Render first (see "Deploy on Render" in `../backend/README.md`) and note its
-   URL, e.g. `https://blazam-api.onrender.com`.
-2. Import this folder into Vercel (framework: Next.js, root: `frontend`). Set
-   `NEXT_PUBLIC_API_URL=https://blazam-api.onrender.com` for Production and Preview. It is inlined
-   at **build** time, so redeploy after changing it.
-3. On Render, set `CORS_ORIGINS` to your Vercel URL (plus any custom domain), and
-   `CORS_ORIGIN_REGEX` if you want preview deploys to work.
-4. Never put `AUDD_API_TOKEN` in Vercel: `NEXT_PUBLIC_*` values ship to every browser. The token
-   belongs only on Render.
+Production builds call the backend through a same-origin proxy: the browser requests
+`/backend/api/...` and a Next.js rewrite (`next.config.ts`) forwards it to the backend. The backend
+address is a **server-only** variable, so nothing sensitive is public and CORS isn't involved.
 
-The two `/api/deezer/*` route handlers run as Vercel functions; nothing else is needed.
+1. Deploy the backend on Render first (see "Deploy on Render" in `../backend/README.md`).
+2. In Vercel, import the repo with **Root Directory `frontend`**. Set
+   `BLAZAM_API_ORIGIN=https://<your-service>.onrender.com` (no `NEXT_PUBLIC_` prefix, no trailing
+   slash). Rewrites are resolved at build time, so redeploy after changing it.
+3. Don't set `NEXT_PUBLIC_API_URL`; it would bypass the proxy. Never put `AUDD_API_TOKEN` in Vercel.
+
+Local `npm run dev` still calls `http://localhost:8000` directly. The proxy path was checked with
+`next build && next start` against the local backend: health, recognition, SSE job streams and the
+browser flow all went through `/backend`. Limits of Vercel's proxy (request size, very long
+streams) may affect large file uploads on **Add songs**. If an SSE stream is cut, job progress
+falls back to polling automatically.
 
 ---
 
